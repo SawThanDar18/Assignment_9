@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Assignment_9</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_search">Search</string>
+    <string name="title_coming_soon">Coming Soon</string>
+    <string name="title_download">Download</string>
+    <string name="title_more">More</string>
+
+    <!--fragment_movie_list-->
+    <string name="movie_lbl1">Now Playing</string>
+    <string name="movie_lbl2">Popular</string>
+    <string name="movie_lbl3">Upcoming</string>
+    <string name="movie_lbl4">Top Rated</string>
+
+    <!--fragment_movie_detail-->
+    <string name="detail_lbl1">2019</string>
+    <string name="detail_lbl2">18+</string>
+    <string name="detail_lbl3">1h 3m</string>
+    <string name="detail_lbl4">Play</string>
+    <string name="detail_lbl5">My List</string>
+    <string name="detail_lbl6">Rate</string>
+    <string name="detail_lbl7">MORE LIKE THIS</string>
+    <string name="detail_lbl8">Nikki Glaser bares all in a blistering stand-up special about sex, sobriety and getting over her own insecurities. And she will not spare you the details.</string>
+
+    <!--fragment_search-->
+    <string name="search_hint">Dragon</string>
+    <string name="search_lbl1">Movies and TV</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
