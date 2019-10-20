@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.1"
@@ -13,12 +15,24 @@ android {
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
+        buildConfigField 'String', 'TMDB_API_KEY', "\"${tmdbApiKey}\""
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+        kotlinOptions {
+            jvmTarget = "1.8"
         }
     }
 }
@@ -39,4 +53,28 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //Gson
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    //coil-kt
+    implementation("io.coil-kt:coil:0.7.0")
+
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.6.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+
+    //ROOM Library
+    implementation "android.arch.persistence.room:runtime:1.1.1"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    kapt "android.arch.persistence.room:compiler:1.1.1"
+
+    //live data
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+
+    //youtube player
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.4'
+
+    //work manager
+    implementation "androidx.work:work-runtime:2.2.0"
 }

@@ -6,13 +6,13 @@
     <dimen name="width_0">0dp</dimen>
     <dimen name="width_1">30dp</dimen>
     <dimen name="width_2">40dp</dimen>
-    <dimen name="width_3">120dp</dimen>
+    <dimen name="width_3">100dp</dimen>
 
     <dimen name="height_1">30dp</dimen>
     <dimen name="height_2">35dp</dimen>
     <dimen name="height_3">40dp</dimen>
     <dimen name="height_4">50dp</dimen>
-    <dimen name="height_5">200dp</dimen>
+    <dimen name="height_5">150dp</dimen>
     <dimen name="height_6">650dp</dimen>
 
     <dimen name="text_1">15sp</dimen>

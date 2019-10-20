@@ -26,3 +26,16 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+def tmdbProperties = loadTMDBProperties()
+
+ext{
+    tmdbApiKey = tmdbProperties.getProperty('TMDB_API_KEY')
+}
+
+
+def loadTMDBProperties(){
+    Properties localProperties = new Properties()
+    localProperties.load(project.rootProject.file('tmdb_api_key.properties').newDataInputStream())
+    return localProperties
+}
